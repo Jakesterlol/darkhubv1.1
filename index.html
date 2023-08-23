@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.cancelbtn {
+
+width: auto;
+
+padding: 10px 18px;
+
+background-color: red;
+
+}
+
+
+
+/* Center the image and position the close button */
+
+.imgcontainer {
+
+text-align: center;
+
+margin: 24px 0 12px 0;
+
+position: relative;
+
+}
+
+
+
+img.avatar {
+
+width: 40%;
+
+border-radius: 50%;
+
+}
+
+
+
+.container {
+
+padding: 16px;
+
+}
+
+
+
+span.psw {
+
+float: right;
+
+padding-top: 16px;
+
+}
+
+
+
+/* The Modal (background) */
+
+.modal {
+
+display: none; /* Hidden by default */
+
+position: fixed; /* Stay in place */
+
+z-index: 1; /* Sit on top */
+
+left: 0;
+
+top: 0;
+
+width: 100%; /* Full width */
+
+height: 100%; /* Full height */
+
+overflow: auto; /* Enable scroll if needed */
+
+background-color: #36393E; /* Fallback color */
+
+background-color: #36393e; /* Black w/ opacity */
+
+padding-top: 60px;
+
+}
+
+/* The Modal (background) */
+
+.modal-error {
+
+display: none; /* Hidden by default */
+
+position: fixed; /* Stay in place */
+
+z-index: 1; /* Sit on top */
+
+left: 0;
+
+top: 0;
+
+width: 100%; /* Full width */
+
+height: 100%; /* Full height */
+
+overflow: auto; /* Enable scroll if needed */
+
+background-color: whitesmoke; /* Fallback color */
+
+background-color: #36393e; /* Black w/ opacity */
+
+padding-top: 60px;
+
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+
+background-color: #36393e;
+
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+
+border: 3px solid #1e2124;
+
+width: 1000px; /* Could be more or less, depending on screen size */
+
+}
+
+/* Modal Content/Box */
+
+.modal-content-error {
+
+background-color: #36393e;
+
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+
+border: 3px solid #1e2124;
+
+width: 1000px; /* Could be more or less, depending on screen size */
+
+border-radius: 30px;
+
+}
+
+/* The Close Button (x) */
+
+.close {
+
+position: absolute;
+
+right: 25px;
+
+top: 0;
+
+color: red;
+
+font-size: 35px;
+
+font-weight: bold;
+
+}
+
+
+
+.close:hover,
+
+.close:focus {
+
+color: Black;
+
+cursor: pointer;
+
+}
+
+
+
+/* Add Zoom Animation */
+
+.animate {
+
+-webkit-animation: animatezoom 0.6s;
+
+animation: animatezoom 0.6s
+
+}
+
+
+
+@-webkit-keyframes animatezoom {
+
+from {-webkit-transform: scale(0)}
+
+to {-webkit-transform: scale(1)}
+
+}
+
+@keyframes animatezoom {
+
+from {transform: scale(0)}
+
+to {transform: scale(1)}
+
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+
+span.psw {
+
+   display: block;
+
+   float: none;
+
+}
+
+.cancelbtn {
+
+   width: 100%;
+
+}
+
+}
+.header {
+  border-radius:00px;
+    height: 70px; 
+    width: 60px; 
+    float: left; 
+    position: relative; 
+    transition:width 0.5s; 
+    -webkit-transition:width 0.5s; 
+    background-color: rgba(29, 29, 29, 0);
+    list-style-type: none;
+    overflow-x:visible;
+    overflow-y:hidden;
+    padding: 0;
+    margin: 0;
+
+}
+.header:hover {
+    width: 100%; /* This is the height on hover */
+    border-radius: 10px;
+    background-color: rgb(255,255,255,0.2);
+    height: 50px;
+}
+.sidediv{
+  width: 75px;
+  height: 2020%;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px;
+  float: left;
+}
+.keydiv{
+  width: 300px;
+  height: 200px;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px;
+  float: left;
+  margin-top: 15%;
+  margin-left: 40%;
+}
+.key1div{
+  width: 300px;
+  height: 30px;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px;
+}
+.toptabdiv{
+  width: 100%;
+  height: 35px;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px
+}
+.welcomediv{
+  width: 999;
+  height: 300px;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px;
+  text-align: center;
+}
+.welcomerdiv{
+  width: 999;
+  height: 75px;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px;
+  text-align: center;
+}
+.newsbtn{
+  width: 100px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+.newsbtn:hover{
+  width: 100px;
+  height: 50px;
+  background-color: greenyellow;
+  border-radius: 15px;
+  margin: auto;
+  border: 2px white solid;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(255,255,255,0.2);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+iframe {
+    width: 500px;
+    height: 500px;
+}
+iframe.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+</head>
+<script>
+  function requestFullScreen(element) {
+// Supports most browsers and their versions.
+var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
+
+if (requestMethod) { // Native full screen.
+requestMethod.call(element);
+} else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+var wscript = new ActiveXObject("WScript.Shell");
+if (wscript !== null) {
+    wscript.SendKeys("{F11}");
+}
+}
+}
+
+function makeFullScreen() {
+document.getElementsByTagName("iframe")[0].className = "fullScreen";
+var elem = document.body;
+requestFullScreen(elem);
+}
+function closeFullscreen() {
+if (document.exitFullscreen) {
+document.exitFullscreen();
+} else if (document.webkitExitFullscreen) { /* Safari */
+document.webkitExitFullscreen();
+} else if (document.msExitFullscreen) { /* IE11 */
+document.msExitFullscreen();
+}
+return (ul)
+}
+document.addEventListener("keydown", event => {
+if (event.isComposing || event.keyCode !== 65) {
+escape;
+}
+closeFullscreen();
+});
+</script>
+<body style="background-color:rgb(29, 29, 29); overflow: visible;">
+  <div class="keydiv" id="keydiv"><div class="key1div">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key System</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please enter the key below!<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" onclick="toggleFullScreen()" type="text" onkeyup="check_password (this);"><br><br><a style="font-size: 32px;color:rgb(255, 104, 104)"><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Chromebook Users: Press the 5th key at the top of your keyboard.)</a></div>
+  <script>
+var elem = document.documentElement;
+function toggleFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+  </script>
+  <script>
+    function check_password (input_element) {
+  
+  //get value of input
+  var password = input_element.value;
+  
+  //check value and show/hide the div
+  if (password == 'darkhubv1')
+      document.getElementById ('thisisthediv').style.display = 'block';
+      if (password == 'darkhubv1')
+      document.getElementById ('keydiv').style.display = 'none'
+    
+  else
+      document.getElementById ('thisisthediv').style.display = 'none';
+
+}
+  </script>
+  <div style="display: none;" id="thisisthediv">
+    <div class="toptabdiv">&nbsp;&nbsp;<a style="float:left; font-size: 14px;">&nbsp;&nbsp;&nbsp;<img style="padding-top: 5px;" width="25px" height="25px" src="https://media.discordapp.net/attachments/833440105993601025/1141101713957335150/Untitled89_20230815161038.png?width=657&height=657">&nbsp;&nbsp;&nbsp;</a><a>&nbsp;&nbsp;<u>DarkHub_v1_GameKit</u></a><br><br>
+    <div class="sidediv"><br>&nbsp;&nbsp;<a href="index.html"><img href="index.html" src="https://cdn.discordapp.com/attachments/833440105993601025/1141124605357084672/Untitled89_20230815173241.png" width="50px" hieght="50px"></a><br><br><a style="text-align: center;">&nbsp;&nbsp;&nbsp;___</a>
+      <br><br><br>&nbsp;&nbsp;<a href="games.html"><img href="https://google.com" src="https://cdn.discordapp.com/attachments/833440105993601025/1141124605973639308/Untitled89_20230815173509.png" width="50px" hieght="50px"></a><br><br><a style="text-align: center;">&nbsp;&nbsp;&nbsp;___</a><br><br><br>&nbsp;
+      <a href="updates.html"><img href="https://google.com" src="https://cdn.discordapp.com/attachments/833440105993601025/1141124606275637268/Untitled89_20230815174003.png" width="50px" hieght="50px"></a><br><br><a style="text-align: center;">&nbsp;&nbsp;&nbsp;___</a><br><br><br>&nbsp;
+      <a href="question.html"><img href="https://google.com" src="https://cdn.discordapp.com/attachments/833440105993601025/1141124606514696192/Untitled89_20230815174120.png" width="50px" hieght="50px"></a></div>
+      <div class="maindiv2"><div style="background-color: black; width: 30px"></div><div style="margin-left: 180px; margin-right: 180px;" class="welcomediv"><div class="welcomerdiv"><br><a style="margin: auto; text-align: center"><b>Welcome, DarkHub_User<a id="usernumber"><script>
+document.getElementById("usernumber").innerHTML =
+Math.floor(Math.random() * (68 - 22 + 1)) + 22
+</script></script></a></b></a></div><br><a>Welcome to DarkHub v1 by JavaSploits. If you are seeing this, you went thru the key system, or you are key bypassed. If neither of these are tru, please contact the administrators.</a><br><br><a>If you have a custom theme, and you'd like to change it, you must re-order your personalized client.</a><br><br><a>We update every day, make sure to check for <u>updates</u> so you can get the lates version!</a><br><br><a style="color:rgb(250, 100, 100)">The sidebar icons are loading at 429ms - Bug Reported Already</a></div><br>
+      <div style="margin-left: 180px; margin-right: 180px;" class="welcomediv"><div class="welcomerdiv"><br><a style="margin: auto; text-align: center"><b>Information For New Users</b></a></div><br><a>Welcome to the best, leading unblocked (website?) although, this may be a little more difficult to remember, and isnt as easy as going to a website, the reason darkhub is like this is because.. Darkhub runs in a file, which gives it the ability to mask itself from most leading website blockers. So, if you are at school, and want to look at your socials, watch youtube, play games, or generally break the rules for no point. Darkhub is here! DarkHub has an amazing UI to begin with, but it is to not that we are updating it. While we talk about updates, that little paper icon on the sidebar is the updates page. Check there for updates. With that being said, we are also proud to announce, Darkhub will be launching their own communications server in Accord, a messaging app, and it will be implemented as an app here in DarkHub.</a><br><br></div><br>
+      <div style="margin-left: 180px; margin-right: 180px; height: 300px;" class="welcomediv"><div class="welcomerdiv"><br><a style="margin: auto; text-align: center"><b>News / Press Updates</b></a></div><br><a><u>DarkHub v1 was down from 4:37am - 11:43am on August 17th, 2023</u></a><br>_____<br><br><a><u>DarkHub v1 is currently having a few issues.. The questions tab<br>is broken, the questions tab has a random blue button, and the title is broken on all pages</u></a><br>_____<br><br><a style="color:rgb(255, 96, 96);" href="browser.html"><b><u>THE BROWSER IS RELEASED CLICK HERE</u></b></a></div><br><br></div></div></div>
+</body>
+</html>
